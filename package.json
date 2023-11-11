@@ -1,0 +1,14 @@
+{
+  "name": "zenn",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "zenn-cli": "^0.1.148"
+  }
+}
