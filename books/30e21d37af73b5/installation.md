@@ -105,7 +105,7 @@ bun add @clerk/nextjs
 
 Clerk ダッシュボードでプロジェクトを作成（無料）し、認証キーを取得し、`.env.local` に追加します。
 
-```ini:.env.local
+```dotenv:.env.local
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
 CLERK_SECRET_KEY=your_secret_key
 ```
@@ -272,5 +272,16 @@ bun prisma migrate dev --name init
 ```
 
 以後 `schema.prisma` を変更したら `bun prisma migrate dev` でマイグレーションを実行します。
+
+prisma はインストール時に schema を generate してくれますが、現在 Bun ではその動作が発生しないため、以下を追記して明示的に generate するようにします。
+
+```json:package.json
+{
+  "scripts": {
+    "postinstall": "prisma generate"
+    // ...
+  }
+}
+```
 
 以上で環境構築は終了です。
