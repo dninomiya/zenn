@@ -22,3 +22,6 @@ title: 'はじめに'
 - Hosting: Vercel
 
 を使って実装するガイドです。
+
+- スタイルは省略し、機能的な部分に焦点を絞っています。
+- 質問や訂正の提案は [X コミュニティ](https://twitter.com/i/communities/1720660726174593521/hashtag/AMA)でお願いします。
