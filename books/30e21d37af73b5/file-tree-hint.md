@@ -20,3 +20,11 @@ B パターンは必要な箇所にアクションファイルを設置します
 ![](/images/like-button-directory.png)
 
 こうすることで、お気に入りボタンで使われる画像やアクションが明確になります。
+
+# 公式のアプローチは？
+
+主に Vercel のメンバーによって作られる[公式テンプレート](https://vercel.com/templates/next.js)は参考になります。ただ、現状 ServerActions を多用するプロジェクトは少なく、こちらではコンポーネントにサーバーアクションが直書きされています。
+
+https://github.com/vercel-labs/next-partial-prerendering
+
+余談ですがコンポーネントのファイル名はほとんどのテンプレートにおいてケバブケース(`like-button.tsx`)で命名されています。

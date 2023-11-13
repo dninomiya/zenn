@@ -14,15 +14,27 @@ title: Cloudflare R2 の準備
 
 ## 環境変数の設定
 
-バケットの画面より
+管理画面よりトークンを作成します。
+
+![](/images/cloudflare-create-token-1.png)
+
+API トークンを以下の設定で作成します。Specify buckets は自分のバケットを選択してください。
+
+![](/images/cloudflare-create-token-2.png)
+
+最後の画面で必要な情報をコピーします。この情報は 2 度と表示されないので必ずコピーしてください。同時に、この情報が人に知れるとバケットにアクセスされる可能性があるので注意してください。紛失したら同じフローでトークンを再作成できます。
+
+![](/images/cloudflare-create-token-3.png)
+
+コピーした情報をもとに環境変数を設定します。
 
 ```ini:.env.local
-CLOUDFLARE_ENDPOINT=xxx
-CLOUDFLARE_ACCESS_KEY_ID=xxx
-CLOUDFLARE_ACCESS_KEY=xxx
+CLOUDFLARE_ACCESS_KEY_ID=1の内容
+CLOUDFLARE_ACCESS_KEY=2の内容
+CLOUDFLARE_ENDPOINT=3の内容
 
 # サブドメインの公開 URL
-IMAGE_HOST_URL=xxx
+IMAGE_HOST_URL=冒頭で有効にしたサブドメインのURL
 ```
 
 ## 画像操作関数を作成

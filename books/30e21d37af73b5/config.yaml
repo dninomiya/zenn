@@ -8,10 +8,13 @@ chapters:
   - intro
   - installation
   - init-clerk
+  - init-cloudflare
   - init-vercel
   - init-prisma
-  - init-cloudflare
   - layout
+  - analytics
   - onboarding
   - file-tree-hint
   - post-list
+  - post-detail
+  - post-form
