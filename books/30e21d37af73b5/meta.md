@@ -77,6 +77,6 @@ export async function generateMetadata(
 
 作った画像を opengraph-image.png & twitter-image.png という名前でそれぞれ作成し、`/app` に設置します。（複製で OK）
 
-最終的にこのような状態があれば OK です。
+最終的にこのような状態になれば OK です。
 
 ![](/images/meta-files.png)
