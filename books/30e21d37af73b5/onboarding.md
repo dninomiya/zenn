@@ -95,7 +95,7 @@ const UserSchema = z.object({
   name: z.string().max(240),
 });
 
-export const createUser = async () => {
+export const createUser = async (validatedData: FormData) => {
   'use server';
 
   const id = authGuard();

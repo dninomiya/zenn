@@ -100,6 +100,17 @@ export const deletePost = async (id: string, imageURL?: string | null) => {
   revalidatePath('/');
   redirect('/');
 };
+
+export const getOwnPost = (editId: string) => {
+  const uid = authGuard();
+
+  return db.post.findUnique({
+    where: {
+      id,
+      authorId: uid,
+    },
+  });
+}
 ```
 
 ```tsx:app/components/post-form/index.tsx
@@ -113,18 +124,18 @@ import ImageCropper from '@/app/components/image-cropper';
 import SubmitButton from '@/app/components/submit-button';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { faker } from '@faker-js/faker';
 
 export default async function PostForm({ editId }: { editId?: string }) {
-  const authorId = authGuard();
   const oldPost = editId ? await getOwnPost(editId) : null;
 
   const defaultValue = oldPost
     ? {
+        title: oldPost.title,
         body: oldPost.body,
       }
     : {
-        body: faker.lorem.sentence(4),
+        title: '',
+        body: '',
       };
 
   return (
