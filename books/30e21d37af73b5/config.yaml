@@ -1,9 +1,8 @@
 title: 'Next.js 14 アプリ開発のあらすじ'
 summary: 'Next.js 14 / Prisma / Clerk / Vercel Postgres / CloudFlare R2 / shadcn/ui / Tailwind CSS を使ったアプリ開発の雰囲気をつかむ'
-topics: ['nextjs', 'clerk', 'prisma', 'cloudflarer2']
-published: false
-price: 0 # 有料の場合200〜5000
-# 本に含めるチャプターを順番に並べましょう
+topics: ['nextjs', 'clerk', 'prisma', 'cloudflarer2', 'bun']
+published: true
+price: 0
 chapters:
   - intro
   - installation
