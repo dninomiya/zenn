@@ -12,9 +12,6 @@ import { Button } from '@/components/ui/button';
 <header>
   <span>ロゴ</span>
   <SignedIn>
-    <Button asChild>
-      <Link href="/create">ポスト</Link>
-    </Button>
     <UserButton />
   </SignedIn>
   <SignedOut>
