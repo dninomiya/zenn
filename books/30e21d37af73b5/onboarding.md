@@ -4,13 +4,16 @@ title: 'オンボーディングフロー'
 
 ![](/images/onboarding.png)
 
-はじめて利用するユーザーがアカウント等を作成し、利用可能な状態になるためのフローをオンボーディングフロートいいます。
+はじめて利用するユーザーがアカウント等を作成し、利用可能な状態になるためのフローをオンボーディングフローといいます。
 
 # リダイレクト
 
 現状はログインしているかしていないかを軸にリダイレクトが自動でなされますが、これをオンボーディングの完了ステータスで判断するよう変更します。
 
 ```ts:middleware.ts
+import { authMiddleware, clerkClient, redirectToSignIn } from '@clerk/nextjs';
+import { NextResponse } from 'next/server';
+
 export default authMiddleware({
   publicRoutes: ['/'],
   async afterAuth(auth, req) {
@@ -49,7 +52,15 @@ export default authMiddleware({
 
 sessionClaims を受け取るためにアプリのダッシュボードより `onboarded` というキーのデータをセッションに含めるよう設定します。
 
-![](/images/clerk-customize-session-token.png)
+![](/images/clerk-customize-session-token-1.png)
+
+```json
+{
+  "onboarded": "{{user.public_metadata.onboarded}}"
+}
+```
+
+![](/images/clerk-customize-session-token-2.png)
 
 ## リダイレクトはどう制御するのが良いのか？
 

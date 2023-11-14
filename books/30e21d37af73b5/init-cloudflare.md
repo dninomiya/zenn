@@ -61,9 +61,7 @@ const client = new S3Client({
   },
 });
 
-export const putImage = async (dataUrl: string, pathname: string) => {
-  const file = dataURLtoBuffer(dataUrl);
-
+export const putImage = async (file: File, pathname: string) => {
   const uploadParams: PutObjectCommandInput = {
     Bucket: 'next-demo',
     Key: pathname,

@@ -33,6 +33,7 @@ model Post {
   // ID はサムネイル画像で使う都合マニュアル生成するので乱数IDは使わない
   id           String   @id
   thumbnailURL String?
+  title        String   @db.VarChar(140)
   body         String   @db.VarChar(140)
   author       User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
   authorId     String

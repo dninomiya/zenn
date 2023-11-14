@@ -9,20 +9,24 @@ _実装の解説において、スタイルの部分は省略し機能的な部�
 ```tsx:app/components/header.tsx
 import { Button } from '@/components/ui/button';
 
-<header>
-  <span>ロゴ</span>
-  <SignedIn>
-    <UserButton />
-  </SignedIn>
-  <SignedOut>
-    <SignInButton>
-      <Button variant="outline">ログイン</Button>
-    </SignInButton>
-    <SignUpButton>
-      <Button>新規登録</Button>
-    </SignUpButton>
-  </SignedOut>
-</header>
+export default function Header() {
+  return (
+    <header>
+      <span>ロゴ</span>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton>
+          <Button variant="outline">ログイン</Button>
+        </SignInButton>
+        <SignUpButton>
+          <Button>新規登録</Button>
+        </SignUpButton>
+      </SignedOut>
+    </header>
+  );
+}
 ```
 
 # レイアウトに設置
