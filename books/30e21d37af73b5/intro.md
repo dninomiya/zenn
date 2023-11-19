@@ -3,7 +3,7 @@ title: 'はじめに'
 ---
 
 :::message
-フィードバックを募る目的でドラフト版として公開しています。ガイドに沿ってエラーが出た場合や説明不足の点などあればお気軽に[フィードバック](https://twitter.com/i/communities/1720660726174593521)をお願いします。
+フィードバックを募る目的でドラフト版として公開しています。ガイドに沿ってエラーが出た場合や説明不足の点などあればお気軽に[フィードバック](https://twitter.com/i/communities/1720660726174593521)をお願いします。([変更履歴](https://github.com/dninomiya/zenn/commits/main/books/30e21d37af73b5))
 :::
 
 # はじめに
@@ -32,7 +32,7 @@ title: 'はじめに'
 を使って実装するガイドです。スタイルは省略し、機能的な部分に焦点を絞っています。
 
 [デモ](https://next-demo-app-henna.vercel.app) / [ソースコード](https://t.co/r2MCRW15YU)
-_デモ では `xxx+clerk_test@example.com` / `424242` で任意のデモアカウントを作成できます。_
+_デモ では `xxx+clerk_test@example.com` / `424242` で任意のデモアカウントを作成できます。(xxx は任意の文字列)_
 
 ---
 
