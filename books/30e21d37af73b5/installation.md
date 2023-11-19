@@ -16,7 +16,7 @@ npm i -g bun
 bunx create-next-app@latest
 ```
 
-質問の回答は以下（すべてデフォルトなので Enter 連打で OK）
+質問の回答は以下のようにしてください。一度初期化以降は前回の値が初期値として使われるので Enter 連打で OK です。
 
 ```bash
 What is your project named? my-app
