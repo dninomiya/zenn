@@ -122,7 +122,7 @@ NEXT_PUBLIC_CLERK_USER_PROFILE=***
 
 以下のファイルを作成します。これを使うことでサーバーアクションごとに認証ガードを実装できます。
 
-```ts:actions/auth.ts
+```ts:app/actions/auth.ts
 'use server';
 
 import { auth } from '@clerk/nextjs';

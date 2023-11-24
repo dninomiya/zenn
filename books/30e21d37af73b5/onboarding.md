@@ -82,12 +82,21 @@ export default async function UserForm() {
 }
 ```
 
+入力内容が正しいことをチェックするために [Zod](https://zod.dev) を使います。まずはインストールします。
+
+```bash
+bun add zod
+```
+
+zod を使って入力内容のチェックを行い、問題なければユーザーデータを追加します。
+
 ```ts:app/onboarding/action.ts
 'use server';
 
 import { db } from '@/app/actions/lib';
 import { Prisma } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
+import { authGuard } from '@/app/actions/auth';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
