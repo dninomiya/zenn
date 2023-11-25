@@ -22,18 +22,10 @@ export default async function Page({
   }
 
   return (
-    <div>
-      {post ? (
-        <article>
-          <h1>{post.title}</h1>
-          <p>{post.body}</p>
-        </article>
-      ) : (
-        <p>
-          記事はありません
-        </p>
-      )}
-    </div>
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+    </article>
   );
 }
 ```
